@@ -1,0 +1,96 @@
+{
+  "translations": {
+    "navbar": {
+      "ru": "РУ",
+      "uz": "O‘Z"
+    },
+    "collapse_content": {
+      "faq": "Ko'p so'raladigan savollar"
+    },
+    "form_comment": {
+      "title": "Sinov qilib ko'rishga nima deysiz?",
+      "desc": "Bunday xizmat turlariga bo'lgan ikkilanishingizni yo'qotish, hamda sifat va narx borasidagi kutilmalaringizga aniq javob olishingiz uchun sizga sinov muddatidani bepul taqdim qilishimizni ma'lum qilamiz.",
+      "full_name": "Ismingiz",
+      "need": "Talab qilinadi",
+      "comment": "Izohlar",
+      "agree": "Foydalanish shartlariga roziman",
+      "send": "Yuborish",
+      "send_seccesful": "Muvaffaqiyatli yuborildi",
+      "contact": "Tez orada yanada aniqlik kiritish maqsadida siz bilan bog'lanamiz.",
+      "email": "E-mail manzilingiz",
+      "resume": "Rezyumega manzil"
+    },
+    "form_career": {
+      "title": "Biz bilan ishlashni xohlaysizmi?",
+      "desc": "Bizning ahil va professional jamoamizga qo'shilish uchun berilgan formani batafsil to'ldiring va bizga yuboring. Biz tanishib chiqishimiz bilanoq siz bilan bog'lanamiz.",
+      "full_name": "Ismingiz",
+      "need": "Talab qilinadi",
+      "comment": "Izohlar",
+      "agree": "Foydalanish shartlariga roziman",
+      "send": "Yuborish",
+      "send_seccesful": "Muvaffaqiyatli yuborildi",
+      "contact": "Tez orada yanada aniqlik kiritish maqsadida siz bilan bog'lanamiz.",
+      "email": "E-mail manzilingiz",
+      "resume": "Rezyumega manzil"
+    },
+    "header_main": {
+      "title": "Nasvyazi zamonaviy aloqa markazi",
+      "desc": "Har bir qo'ng'iroq biznes uchun muhim. Har bir qo'ng'iroqqa javob beramiz, ustida ishlaymiz va saqlab qolamiz.",
+      "btn_header": "Ariza qoldirish",
+      "call": "Qayta bog'lanish",
+      "tz": "TT tuzish"
+    },
+    "about_company": {
+      "title": "Kompaniya haqida",
+      "desc1": "Kuchli boshqaruv jamoa hamda zamonaviy texnik baza sohibi sifatida, biz barcha o‘lchamdagi, istalgan mulkchilik shaklidagi korxona va tashkilotlarga kuchli yechimlar, shuningdek, bilim va ko‘nikmalarimizni taklif qila olamiz.",
+      "desc2": "Kompaniyamizning turli darajadagi yirik xalqaro va mahalliy mijozlar bilan 12 yildan ortiq ish tajribasi bizga individual mijozlarning ham, turli soha egalarining ham ehtiyojlarini tushunishda bebaho bilimlarni to'plash imkonini yaratdi."
+    },
+    "our_service": {
+      "title": "Bizning xizmatlar",
+      "all_service": "Barcha xizmatlar",
+      "more": "Batafsil"
+    },
+    "our_group": {
+      "title": "Bizning jamoa"
+    },
+    "why_us": {
+      "titlemain": "Nega aynan biz?",
+      "title1": "24/7 xizmat ko'rsatish",
+      "title2": "Mutlaqo maxfiylik siyosati",
+      "title3": "Natija uchun javobgarlik",
+      "title4": "Batafsil onlayn statistika",
+      "desc1": "Biz dam olish kunlarisiz, bayramlarsiz, va texnik ishlarsiz xizmat ko'rsatamiz. Barcha qo'ng'iroqlarga javob beriladi –w bir vaqtning o'zida 100 ta qo'ng'iroq qilingan taqdirda ham.",
+      "desc2": "Xodimlar uchun maxfiy ma'lumotlar bilan ishlashning qat'iy tartibi mavjud. Xuddi shunday majburiyat va talablar mijoz bilan tuzilgan shartnomaga ham kiritilgan",
+      "desc3": "Mas'uliyat – faqat boshqaruv jamoasiga xos bo'lgan alohida sifat emas. Bizning talabamiz bo'yicha, har bir darajadagi xodim o'z ishining natijalari uchun javobgardir.",
+      "desc4": "Qo'ng'iroqlarni tinglab ko'rish va anketalar bilan tanishib chiqish uchun \"Shaxsiy kabinet\" ga kirish imkoniyati beriladi. Doimiy xabardor bo'ling."
+    },
+    "footer_nav": {
+      "main": "Asosiy",
+      "company": "Kompaniya haqida",
+      "service": "Xizmatlar",
+      "clients": "Mijozlar",
+      "career": "Karyera",
+      "faq": "FAQ",
+      "contact": "Aloqa",
+      "sub_footer": "Maxfiylik siyosati"
+    },
+    "another": {
+      "trust": "Bizga ishongan kompaniyalar",
+      "career_desc": "Biz sizni do'stona va ahil jamoamizga taklif qilamiz. Bu yerda siz turli kompaniyalarning mijozlari bilan professional suhbat qilishni o'rganishingiz, muloqat qilish va ishontirish ko'nikmalaringizni oshirishingiz mumkin. Shuningdek, ishonchli do'stlar bilan uchrashishingiz va yangi do'stlar orttirishingiz mumkin.",
+      "fill_form": "Formani to'ldiring",
+      "brandwork": "Shunday brendlar bilan ishlaysiz",
+      "view": "Hamkorlarimiz fikrlari"
+    },
+    "why_good": {
+      "titlemain": "Nega biz bilan yaxshi?",
+      "title1": "Qulay grafik",
+      "title2": "Kompaniya tarafidan tushlik",
+      "title3": "АТТО kartalari",
+      "title4": "Ofisning qulay joylashuvi",
+      "desc1": "Siz uchun qulay ish grafigi taklif qilishimiz mumkin bo'lib, o'zingizga qulay vaqtda ishlashingiz mumkin bo'ladi.",
+      "desc2": "Xodimlar uchun biz mazali tushlik taklif qilamiz. Bu sizga xarajatlaringizni va vaqtingizni tejashga, hamda mazali ovqatdan bahramand bo'lish imkonini yaratadi.",
+      "desc3": "Xodimlarimizga ATTO kartalari taqdim qilinadi. Bu kartalar bilan shaharning istalgan qismiga mutlaqo bepul qatnashingiz va yo'lkiradan pul tejab qolishingiz mumkin bo'ladi.",
+      "desc4": "Ofisimiz shahar markazida joylashgan bo'lib, yaqin atrofida metro va avtobus bekatlari mavjud. Bu sizga ishga va uyga qatnashingizga qulaylik yaratadi."
+    }
+  }
+}
