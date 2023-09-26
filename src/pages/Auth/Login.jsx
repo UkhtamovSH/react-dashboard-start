@@ -8,6 +8,8 @@ import ModalInfo from "../../components/ModalInfo";
 import { get } from "lodash";
 import { styled } from "styled-components";
 import Brand from "../../img/svg/brand.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const UiCard = styled.div`
   background: #ffffff;
@@ -120,15 +122,16 @@ const Login = () => {
   const [statusModal, setStatusModal] = useState(false);
   const [obj, setObj] = useState({});
   const [objE, setObjE] = useState({});
+  const notify = () => toast("Wow so easy !");
 
   const submitLogin = (e) => {
     e.preventDefault();
     // setMainLoading(true);
     let t = true,
       err = {};
-    if (!obj?.username) {
+    if (!obj?.login) {
       t = false;
-      err = { ...err, username: true };
+      err = { ...err, login: true };
     }
     if (!obj?.password) {
       t = false;
@@ -136,38 +139,49 @@ const Login = () => {
     }
     if (t) {
       GetAuthInstance()
-        .post("/api/v1/dashboard/login/", obj)
+        .post("api/v1/login", obj)
         .then((res) => {
-          if (res?.data?.status === 1) {
-            const token = res?.data?.token ?? "";
-            setToken(token);
-            localStorage.setItem("user_id", res?.data?.user?.id);
-            getPermission(res?.data?.user?.id);
+          console.log(res);
+          if (res?.data?.success == 1) {
+            const token = res?.data?.data?.token ?? "";
+            localStorage.setItem("user_id", res?.data?.data?.user?.id);
+            localStorage.setItem("token", token);
+            // getPermission(res?.data?.user?.id);
+
+            // setToken(token)
             navigate("/");
             window.scrollTo({
               top: 0,
               left: 0,
               behavior: "smooth",
             });
-            // toast({
-            //   position: "top-right",
-            //   title: res?.data?.detail,
-            //   status: "success",
-            //   duration: 5000,
-            //   isClosable: true,
-            // });
-          } else {
-            // toast({
-            //   position: "top-right",
-            //   title: res?.data?.detail,
-            //   status: "error",
-            //   duration: 5000,
-            //   isClosable: true,
-            // });
+          }
+          if (res?.data?.success === 1) {
+            toast.success(res?.data?.msg, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          }
+          if (res?.data?.success === 0) {
+            setObjE({ ...objE, common: true });
+            toast.error(res?.data?.msg, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
           }
         })
         .catch((error) => {
-          setObjE({ ...objE, common: true });
+          console.log(error?.response?.status);
         })
         .finally(() => {
           // setMainLoading(false);
@@ -220,15 +234,15 @@ const Login = () => {
               <label>Логин</label>
               <input
                 type={"text"}
-                name="username"
+                name="login"
                 className="phone"
                 placeholder="Ваш логин"
-                value={obj?.username || ""}
+                value={obj?.login || ""}
                 onChange={changeInput}
               />
 
               <div className="errs">
-                {objE.username ? <div>Требуется</div> : ""}
+                {objE.login ? <div>Требуется</div> : ""}
               </div>
               <label>Пароль </label>
               <div className="eye">

@@ -1,4 +1,4 @@
-const TOKEN_KEY = 'token';
+const TOKEN_KEY = "token";
 
 export const getStorage = (local) => {
   return local ? localStorage : sessionStorage;
@@ -7,6 +7,7 @@ export const getToken = () => {
   return localStorage.getItem(TOKEN_KEY) || sessionStorage.getItem(TOKEN_KEY);
 };
 export const setToken = (token, local = false) => {
+  console.log(token);
   const storage = getStorage(local);
   storage.setItem(TOKEN_KEY, token);
 };

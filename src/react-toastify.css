@@ -26,3 +26,11 @@
 .Toastify__close-button svg {
   fill: var(--bold);
 }
+
+.Toastify__toast--error {
+  color: #e74c3c;
+}
+
+.Toastify__toast--success {
+  color: #07bc0c;
+}

@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import Brand from "../img/svg/brand.svg";
 import Settings from "../img/svg/settings-4-line.svg";
 import AminLine from "../img/svg/admin-line.svg";
+import MentorPng from "../img/svg/presentation-fill.svg";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -54,7 +55,6 @@ const Main = styled.div`
   }
   .active {
     width: 260px;
-    border-right: 1px solid rgb(240, 240, 240);
     transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
     overflow-x: hidden;
     position: relative;
@@ -84,6 +84,8 @@ const Main = styled.div`
     width: 100%;
     padding: 7px;
     background-color: #fff;
+    border-right: 2px solid rgb(240, 240, 240);
+    z-index: 999;
     .active_img {
       transition: 225ms;
     }
@@ -98,7 +100,7 @@ const Menu = ({ show }) => {
   return (
     <Main>
       <div className={show === false ? "active" : "noactive"}>
-        <Link to="/admin">
+        <Link to="/">
           <div className="brand">
             <img
               src={Brand}
@@ -112,7 +114,7 @@ const Menu = ({ show }) => {
           <ul className="link_svg_main">
             <li>
               <NavLink
-                to="/admin"
+                to="/"
                 activeclassname="active"
                 title={show === false ? "" : "Админ"}
               >
@@ -128,6 +130,16 @@ const Menu = ({ show }) => {
               >
                 <img src={Settings} className="link_svg" alt="" />{" "}
                 <span>Настройки</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/mentor"
+                activeclassname="active"
+                title={show === false ? "" : "Ментор"}
+              >
+                <img src={MentorPng} className="link_svg" alt="" />{" "}
+                <span>Ментор</span>
               </NavLink>
             </li>
           </ul>

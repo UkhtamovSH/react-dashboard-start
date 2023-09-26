@@ -1,40 +1,52 @@
-import React from "react";
-import { Route, Routes, Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, Outlet, useNavigate } from "react-router-dom";
 import PageNFound from "../components/PageNFound";
 import UserSide from "../layout/UserSide";
-import { Admin, Login, Settings } from "../pages/Admin";
-const Pages = () => (
-  <Routes>
-    <Route path="*" element={<PageNFound />} />
-    <Route index={true} element={<Login />} />
+import { Admin } from "../pages/Admin";
+import { Login } from "../pages/Auth";
+import { issetToken } from "../helpers/tokenStorage";
+import { CreateMentor, Mentor, UpdateMentor } from "../pages/Admin/Mentor";
+const Pages = () => {
+  const navigate = useNavigate();
 
-    {/* --------------client side route-------------- */}
-    <Route
-      element={
-        <UserSide>
-          <Outlet />
-        </UserSide>
-      }
-    >
-      <Route path="/">
-        <Route path="/admin">
+  useEffect(() => {
+    if (localStorage.getItem("token") == null) {
+      navigate("/login");
+    } else if (window.location.pathname === "/login" && issetToken()) {
+      navigate("/");
+    }
+  }, []);
+
+  return (
+    <Routes>
+      <Route path="*" element={<PageNFound />} />
+      <Route path="/login" index={true} element={<Login />} />
+
+      {/* --------------client side route-------------- */}
+      <Route
+        element={
+          <UserSide>
+            <Outlet />
+          </UserSide>
+        }
+      >
+        <Route path="/">
           <Route index={true} element={<Admin />} />
-        </Route>
-        <Route path="/settings">
-          <Route index={true} element={<Settings />} />
-        </Route>
-        {/* <Route path='/catalog'>
-          <Route index={true} element={<Catalog />} />
-          <Route index={false} path=':slug'>
-            <Route index={true} element={<Village />} />
-            <Route index={false} path='hotel/:slug'>
-              <Route index={true} element={<Hotel />} />
+
+          {/* mentor */}
+          <Route index={false} path="/mentor">
+            <Route index={true} element={<Mentor />} />
+            <Route index={false} path="create">
+              <Route index={true} element={<CreateMentor />} />
+            </Route>
+            <Route index={false} path="update">
+              <Route index={true} element={<UpdateMentor />} />
             </Route>
           </Route>
-        </Route>*/}
+        </Route>
       </Route>
-    </Route>
-    {/* --------------client side route-------------- */}
-  </Routes>
-);
+      {/* --------------client side route-------------- */}
+    </Routes>
+  );
+};
 export default Pages;
